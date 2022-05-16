@@ -1,0 +1,198 @@
+.btn--turn{
+    width: 176px;
+    font-size: 26px;
+    padding: 11.5px 0px;
+    box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.08), 0px 9px 46px rgba(0, 0, 0, 0.12);
+}
+
+.form--container{
+    background: #FFFFFF;
+    box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.08);
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.perInf--title{
+    font-weight: 700;
+    font-size: 21px;
+    margin-bottom: 24px;
+}
+
+.perInf--imgChoose{
+    box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.08);
+    position: relative;
+    cursor: pointer;
+}
+
+.perInf--imgChoose:hover .perInf--plus{
+    opacity: 100%;
+}
+
+#perInf--img{
+    width: 100%;
+}
+
+.perInf--imgChoose:hover .perInf--img{
+    filter: brightness(50%);
+}
+
+.perInf--plus{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 50px;
+    transform: translate(-50%, -50%);
+    color: #FFCD57;
+    opacity: 0%;
+    transition: opacity 0.2s ease;
+}
+
+.perInf--container{
+    margin-top: 24px;
+}
+
+.input--perInf{
+    width: 100%;
+    box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.08);
+    border: 2px solid #003459;
+}
+
+.perInf--work + .perInf--work{
+    margin-top: 72px;
+}
+
+.inputContent--perInf{
+    height: calc(100% - 24px);
+}
+
+.perInf--suggest{
+    margin-top: 72px;
+}
+
+.perInf--suggest--tittle{
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.perInf--time{
+    display: flex;
+}
+
+.perInf--time label{
+    min-width: 50px;
+}
+
+.perInf--row{
+    margin-bottom: 24px;
+}
+
+.perInf--btn{
+    height: calc(100% - 24px);
+    margin-top: 24px;
+    width: 100%;
+    padding: 0px;
+    border: none;
+}
+
+.perInf--btn i{
+    color: #FFCD57;
+}
+
+.perInf--btn:hover i{
+    color: white;
+}
+
+.perInf--time-number{
+    text-align: right;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.perInf--content{
+    overflow-wrap: break-word;
+}
+
+.inputContent--range{
+    height: calc(100% - 24px);
+    box-shadow: none;
+}
+
+#white-overlay{
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: none;
+}
+
+.modal--container{
+    background-color: white;
+    max-width: 1140px;
+    height: 90vh;
+    margin-top: 5vh;
+    box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.08), 0px 9px 46px rgba(0, 0, 0, 0.12);
+    overflow-y: scroll;
+}
+
+.modal--title{
+    text-align: center;
+    color: #FFCD57;
+    line-height: 50px;
+    background-color: #003459;
+    margin: 0px -15px 0px -15px;
+}
+
+.file-upload-section{
+    padding: 8px;
+    color: #FFCD57;
+    text-align: center;
+    background: #003459;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+#foto-file{
+    display: none;
+}
+
+.img-container{
+    width: 100%;
+}
+
+.image{
+    width: 100%;
+}
+
+.modal-bodyWhite{
+    margin: 12px 0px 24px 0px;
+}
+
+.btn--imgEditor{
+    width: 100%;
+    padding: 8px 0px;
+    margin-top: 12px;
+}
+
+.btnList--imgEditor{
+    margin-top: 12px;
+}
+
+.btnList--imgEditor--title{
+    margin-bottom: 0px;
+    text-align: center;
+    font-weight: 700;
+}
+
+#color-picker, #colorize-color-picker{
+    width: 15px;
+    height: 15px;
+    border: none;
+}
+
+

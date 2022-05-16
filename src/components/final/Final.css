@@ -1,0 +1,244 @@
+.formpaper{
+    position: relative;
+    width: 1536px;
+    height: 2174px;
+    background: #ffffff;
+}
+.papermarginleft{
+    width: 563px;
+    height: 100%;
+    background: #33393B;
+}
+
+.papercirclecontainer{
+    position: absolute;
+    bottom: 52px;
+    left: 212px;
+}
+
+.paperimagecontainer{
+    margin: 92px auto 0px auto;
+    text-align: center;
+}
+
+.paperimage{
+    width: 378px;
+    height: 567px;
+    background: #ffffff;
+    border-radius: 232px 232px 0px 0px;
+}
+
+.papercontactSkill{
+    width: 378px;
+    margin: 62px auto;
+    border: 6px solid #F2AB44;
+    border-radius: 100px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    line-height: 84px;
+}
+
+.contactSkillbody{
+    display: flex;
+    align-items: center;
+}
+
+.contactSkillbody + .contactSkillbody{
+    margin-top: 32px;
+}
+
+.contactSkillfield{
+    width: 164px;
+    height: 72px;
+    margin-left: 0px;
+    padding-right: 20px;
+    text-align: right;
+    background: #F2AB44;
+    border-radius: 0px 52px 52px 0px;
+    flex: 2;
+}
+
+.contactSkillfield i{
+    color: white;
+    line-height: 72px;
+    font-size: 48px;
+}
+
+.contactSkillcontent{
+    padding-left: 32px;
+    flex: 5;
+}
+
+.contactSkillcontenttitle{
+    font-weight: 500;
+    font-size: 32px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    line-height: normal;
+    margin: 0px;
+}
+
+.contactSkillcontentbody{
+    font-weight: 400;
+    font-size: 26px;
+    color: #FFFFFF;
+    margin: 0px;
+    line-height: normal;
+    overflow-wrap: break-word;
+    width: 336px;
+}
+
+.contactSkillskillName{
+    font-size: 26px;
+    margin-bottom: 0px;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 62px;
+}
+
+.contactSkillskillRange{
+    margin: auto;
+    width: 378px;
+    height: 46px;
+    background: #D5D6D7;
+    border-radius: 103px;
+}
+
+.contactSkillskillLevel{
+    height: 46px;
+    background: #F2AB44;
+    border-radius: 103px;
+}
+
+.papercircle{
+    width: 26px;
+    height: 26px;
+    background: #F2AB44;
+    border-radius: 13px;
+    display: inline-block;
+    margin-inline: 10px;
+}
+
+.papermarginright{
+    width: 973px;
+}
+
+.paperjob{
+    margin: 112px 0px 20px 0px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 52px;
+    text-align: center;
+    color: #000000;
+}
+
+.papernameBox{
+    height: 156px;
+    margin: 0px -15px;
+    background: #F2AB44;
+}
+
+.papername{
+    font-weight: 500;
+    line-height: 156px;
+    font-size: 72px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+.paperintroducepadding{
+    padding-left: 62px;
+    padding-top: 52px;
+}
+
+.introduceorder{
+    background-color: #F2AB44;
+    color: white;
+    border-radius: 77px;
+    display: inline-block;
+    line-height: 103px;
+    width: 103px;
+    height: 103px;
+    font-size: 77px;
+    text-align: center;
+}
+
+.introducetitle{
+    text-transform: uppercase;
+    margin-inline: 26px;
+    color: #33393B;
+    font-size: 52px;
+}
+
+.introducepara{
+    height: 156px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    font-weight: 400;
+}
+
+.introducepara, .introducebodycontainer{
+    font-size: 26px;
+    line-height: normal;
+    margin: 0px;
+    margin: 40px 128px 40px 40px;
+    color: #3f4345;
+}
+
+.introducebodyrow{
+    display: flex;
+}
+
+.introducebodyrow + .introducebodyrow{
+    margin-top: 20px;
+}
+
+.introduceyear{
+    width: 312px;
+    height: 40px;
+    background: #33393B;
+    border-radius: 0px 104px 104px 0px;
+    color: white;
+    font-size: 28px;
+    text-align: right;
+    line-height: 40px;
+    margin-left: -140px;
+    padding-right: 28px;
+}
+
+.introduceyeartitle{
+    width: 260px;
+    font-size: 32px;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+    color: #33393B;
+}
+
+.introducecontenttitle{
+    font-weight: 400;
+    font-size: 32px;
+    color: #000000;
+    line-height: normal;
+    margin: 0px;
+    color: #3f4345;
+}
+
+.introducecontentbody{
+    margin: 10px 0px 0px 0px;
+    font-size: 26px;
+    color: #000000;
+    line-height: normal;
+    font-weight: 400;
+    color: #3f4345;
+    height: 62px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}

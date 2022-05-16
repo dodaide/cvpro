@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Routes,Route,Link} from 'react-router-dom'
+import './App.css'
+import Form from './components/form/Form';
+import Home from './components/home/Home.js';
+import MakeCV from './components/makecv/MakeCV.js';
+import Export from './components/export/Export';
+import Final from './components/final/Final';
+import logo from './logo.png';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <div className="header container-fluid">
+        <div className='container navi'>
+          <Link className="header--logo" to="*">
+            <img className='logo' src={logo}/>
+          </Link>
+          <ul className="header--nav">
+            <li><Link to='*'>Home</Link></li>
+            <li><Link to='/taocv'>Tạo CV</Link></li>
+          </ul>
+        </div>
+      </div>
+      <Routes>
+        <Route path='*' element={<Home/>}/>
+        <Route path='/taocv' element={<MakeCV/>}/>
+        <Route path='/forms' element={<Form/>}/>
+        <Route path='/export' element={<Export/>}/>
+        <Route path='/final' element={<Final/>}/>
+      </Routes>
+      <div className="footer .container-fluid">
+        <div className='container'>
+          <p className="footer--content">
+            Powered by Trần Doãn Đô - Hoàng Hải Lan
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
   );
 }
-
 export default App;

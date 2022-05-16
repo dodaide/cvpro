@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #003459;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color: #E5E5E5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+    position: fixed;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), #0094FF;
+    box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.08), 0px 9px 46px rgba(0, 0, 0, 0.12);
+    filter: drop-shadow(0px 24px 38px rgba(0, 0, 0, 0.08)) drop-shadow(0px 9px 46px rgba(0, 0, 0, 0.12));
+    z-index: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header--logo {
+    line-height: 50px;
+    display: inline-block;
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+    width: 72px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navi {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header--nav {
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+    margin-bottom: 0px; 
+}
+
+.header--nav li {
+    cursor: pointer;
+    line-height: 50px;
+    color: white;
+    width: 100px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.header--nav li a{
+    color: white;
+    text-decoration: none;
+}
+
+.header--nav li:hover {
+    background-color: #005897;
+}
+
+.footer {
+    height: 50px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), #0094FF;
+    box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.08), 0px 9px 46px rgba(0, 0, 0, 0.12);
+}
+
+.footer--content{
+    color: white;
+    line-height: 50px;
+    text-align: center;
 }

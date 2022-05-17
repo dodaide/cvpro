@@ -36,47 +36,53 @@ function Export() {
             
             .form--paper{
                 position: relative;
-                width: 595px;
-                height: 842px;
-                margin: 24px auto;
+                width: 1536px;
+                height: 2174px;
                 background: #ffffff;
                 box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.08), 0px 9px 46px rgba(0, 0, 0, 0.12);
             }
             
             .paper--margin-left{
-                width: 218px;
-                height: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 563px;
+                height: 2174px;
                 background: #33393B;
             }
             
             .paper--circle-container{
                 position: absolute;
-                bottom: 20px;
-                left: 82px;
+                bottom: 52px;
+                left: 212px;
+            }
+            
+            .block36{
+                height: 92px;
             }
             
             .paper--image--container{
-                margin: 36px auto 0px auto;
+                margin: auto;
                 text-align: center;
             }
             
             .paper--image{
-                width: 146px;
-                height: 219px;
+                width: 378px;
+                height: 567px;
                 background: #ffffff;
-                border-radius: 90px 90px 0px 0px;
+                border-radius: 232px 232px 0px 0px;
             }
             
             .paper--contactSkill{
-                width: 139px;
-                margin: 24px auto;
-                border: 2px solid #F2AB44;
-                border-radius: 40px;
+                width: 378px;
+                margin: 62px auto;
+                border: 6px solid #F2AB44;
+                border-radius: 100px;
                 color: white;
                 text-transform: uppercase;
-                font-size: 16px;
+                font-size: 40px;
                 text-align: center;
-                line-height: 33px;
+                line-height: 84px;
             }
             
             .contactSkill--body{
@@ -85,33 +91,33 @@ function Export() {
             }
             
             .contactSkill--body + .contactSkill--body{
-                margin-top: 12px;
+                margin-top: 32px;
             }
             
             .contactSkill--field{
-                width: 63px;
-                height: 28px;
-                margin-left: -15px;
-                padding-right: 8px;
+                width: 164px;
+                height: 72px;
+                padding-right: 20px;
                 text-align: right;
                 background: #F2AB44;
-                border-radius: 0px 20px 20px 0px;
+                border-radius: 0px 52px 52px 0px;
                 flex: 2;
             }
             
             .contactSkill--field i{
                 color: white;
-                line-height: 28px;
+                line-height: 72px;
+                font-size: 48px;
             }
             
             .contactSkill--content{
-                padding-left: 12px;
+                padding-left: 32px;
                 flex: 5;
             }
             
             .contactSkill--content--title{
                 font-weight: 500;
-                font-size: 12px;
+                font-size: 32px;
                 color: #FFFFFF;
                 text-transform: uppercase;
                 line-height: normal;
@@ -120,99 +126,104 @@ function Export() {
             
             .contactSkill--content--body{
                 font-weight: 400;
-                font-size: 10px;
+                font-size: 26px;
                 color: #FFFFFF;
                 margin: 0px;
                 line-height: normal;
                 overflow-wrap: break-word;
-                width: 130px;
+                width: 336px;
             }
             
             .contactSkill--skillName{
-                font-size: 10px;
+                font-size: 26px;
                 margin-bottom: 0px;
                 color: #FFFFFF;
                 text-align: center;
                 text-transform: uppercase;
-                line-height: 24px;
+                line-height: 62px;
             }
             
             .contactSkill--skillRange{
                 margin: auto;
-                width: 140px;
-                height: 18px;
+                width: 378px;
+                height: 46px;
                 background: #D5D6D7;
-                border-radius: 40px;
+                border-radius: 103px;
             }
             
             .contactSkill--skillLevel{
-                height: 18px;
+                height: 46px;
                 background: #F2AB44;
-                border-radius: 40px;
+                border-radius: 103px;
             }
             
             .paper--circle{
-                width: 10px;
-                height: 10px;
+                width: 26px;
+                height: 26px;
                 background: #F2AB44;
-                border-radius: 5px;
+                border-radius: 13px;
                 display: inline-block;
-                margin-inline: 4px;
+                margin-inline: 10px;
             }
             
             .paper--margin-right{
-                width: 377px;
+                width: 973px;
+                position: absolute;
+                top: 0px;
+                height: 2174px;
+                left: 563px;
             }
             
             .paper--job{
-                margin: 32px 0px 8px 0px;
+                margin: 112px 0px 20px 0px;
                 text-transform: uppercase;
                 font-weight: 400;
-                font-size: 20px;
+                font-size: 52px;
                 text-align: center;
                 color: #000000;
             }
             
             .paper--nameBox{
-                height: 61px;
-                margin: 0px -15px;
+                height: 156px;
+                margin: 0px;
                 background: #F2AB44;
             }
             
             .paper--name{
                 font-weight: 500;
-                line-height: 61px;
-                font-size: 28px;
+                line-height: 156px;
+                font-size: 72px;
                 text-align: center;
                 color: #FFFFFF;
                 margin: 0px;
             }
             
             .paper--introduce-padding{
-                padding-left: 24px;
-                padding-top: 20px;
+                padding-left: 62px;
+                padding-top: 52px;
             }
             
             .introduce--order{
                 background-color: #F2AB44;
                 color: white;
-                border-radius: 30px;
+                border-radius: 77px;
                 display: inline-block;
-                line-height: 40px;
-                width: 40px;
-                height: 40px;
-                font-size: 30px;
+                line-height: 103px;
+                width: 103px;
+                height: 103px;
+                font-size: 77px;
                 text-align: center;
             }
             
             .introduce--title{
                 text-transform: uppercase;
-                margin-inline: 10px;
+                margin-inline: 26px;
                 color: #33393B;
+                font-size: 52px;
             }
             
             .introduce--para{
-                height: 60px;
+                height: 155px;
                 overflow: hidden;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
@@ -221,10 +232,10 @@ function Export() {
             }
             
             .introduce--para, .introduce--body-container{
-                font-size: 10px;
+                font-size: 26px;
                 line-height: normal;
                 margin: 0px;
-                margin: 16px 50px 16px 16px;
+                margin: 40px 128px 40px 40px;
                 color: #3f4345;
             }
             
@@ -233,33 +244,33 @@ function Export() {
             }
             
             .introduce--body-row + .introduce--body-row{
-                margin-top: 8px;
+                margin-top: 20px;
             }
             
             .introduce--year{
-                width: 120px;
-                height: 15px;
+                width: 312px;
+                height: 40px;
                 background: #33393B;
-                border-radius: 0px 40px 40px 0px;
+                border-radius: 0px 104px 104px 0px;
                 color: white;
-                font-size: 11px;
+                font-size: 28px;
                 text-align: right;
-                line-height: 15px;
-                margin-left: -55px;
-                padding-right: 11px;
+                line-height: 40px;
+                margin-left: -140px;
+                padding-right: 28px;
             }
             
             .introduce--year--title{
-                width: 100px;
-                font-size: 12px;
+                width: 260px;
+                font-size: 32px;
                 line-height: normal;
-                margin: 4px 0px 0px 0px;
+                margin: 10px 0px 0px 0px;
                 color: #33393B;
             }
             
             .introduce--content--title{
                 font-weight: 400;
-                font-size: 12px;
+                font-size: 32px;
                 color: #000000;
                 line-height: normal;
                 margin: 0px;
@@ -267,13 +278,13 @@ function Export() {
             }
             
             .introduce--content--body{
-                margin: 4px 0px 0px 0px;
-                font-size: 10px;
+                margin: 10px 0px 0px 0px;
+                font-size: 26px;
                 color: #000000;
                 line-height: normal;
                 font-weight: 400;
                 color: #3f4345;
-                height: 24px;
+                height: 62px;
                 overflow: hidden;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
@@ -320,150 +331,153 @@ function Export() {
     return (
         <>
             <div style={{ animation: "appear 0.5s ease" }} className="container appear--animation">
-                <div style={{ marginTop: "120px" }}>
+                <div style={{ margin: "120px 0px 24px 0px" }}>
                     <Link to="/forms" className="btn btn--turn">Điền mẫu</Link>
                 </div>
-                <div ref={htmlFake} className="row form--paper">
-                    <div className="paper--margin-left">
-                        <div className="paper--image--container">
-                            <img className="paper--image" src={storageAvt}/>
+            </div>
+            <div ref={htmlFake} className="form--paper">
+                <div className="paper--margin-left">
+                    <div className="block36"></div>
+                    <div className="paper--image--container">
+                        <img className="paper--image" src={storageAvt}/>
+                    </div>
+                    <div className="paper--contactSkill">contact me</div>
+                    <div className="contactSkill--body">
+                        <div className="contactSkill--field">
+                            <i className="uil uil-map-marker"></i>
                         </div>
-                        <div className="paper--contactSkill">contact me</div>
-                        <div className="contactSkill--body">
-                            <div className="contactSkill--field">
-                                <i className="uil uil-map-marker"></i>
-                            </div>
-                            <div className="contactSkill--content">
-                                <p className="contactSkill--content--title">
-                                    address
-                                </p>
-                                <p className="contactSkill--content--body">{storageAddress}</p>
-                            </div>
-                        </div>
-                        <div className="contactSkill--body">
-                            <div className="contactSkill--field">
-                                <i className="uil uil-facebook-f"></i>
-                            </div>
-                            <div className="contactSkill--content">
-                                <p className="contactSkill--content--title">
-                                    facebook
-                                </p>
-                                <p className="contactSkill--content--body">{storageFb}</p>
-                            </div>
-                        </div>
-                        <div className="contactSkill--body">
-                            <div className="contactSkill--field">
-                                <i className="uil uil-phone-alt"></i>
-                            </div>
-                            <div className="contactSkill--content">
-                                <p className="contactSkill--content--title">
-                                    phone
-                                </p>
-                                <p className="contactSkill--content--body">{storageSdt}</p>
-                            </div>
-                        </div>
-                        <div className="paper--contactSkill">pro skills</div>
-                        {storageSkill.map((skill,index) => {
-                            return(
-                            <div key={index}>
-                                <p className="contactSkill--skillName">{skill.name}</p>
-                                <div className="contactSkill--skillRange">
-                                    <div style={{width: skill.point * 14}} className="contactSkill--skillLevel"></div>
-                                </div>
-                            </div>
-                        )})}
-                        <div className="paper--circle-container">
-                            <span className="paper--circle"></span>
-                            <span className="paper--circle"></span>
-                            <span style={{ background: "#D5D6D7" }} className="paper--circle"></span>
+                        <div className="contactSkill--content">
+                            <p className="contactSkill--content--title">
+                                address
+                            </p>
+                            <p className="contactSkill--content--body">{storageAddress}</p>
                         </div>
                     </div>
-                    <div className="paper--margin-right">
-                        <p className="paper--job">{storageJobPos}</p>
-                        <div className="paper--nameBox">
-                            <p className="paper--name">{storageName}</p>
+                    <div className="contactSkill--body">
+                        <div className="contactSkill--field">
+                            <i className="uil uil-facebook-f"></i>
                         </div>
-                        <div className="paper--introduce-padding">
-                            <div className="paper--introduce">
-                                <div className="introduce--header">
-                                    <span className="introduce--order">1</span>
-                                    <span className="introduce--title">About me</span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                </div>
-                                <p className="introduce--para">{storageAboutMe}</p>
+                        <div className="contactSkill--content">
+                            <p className="contactSkill--content--title">
+                                facebook
+                            </p>
+                            <p className="contactSkill--content--body">{storageFb}</p>
+                        </div>
+                    </div>
+                    <div className="contactSkill--body">
+                        <div className="contactSkill--field">
+                            <i className="uil uil-phone-alt"></i>
+                        </div>
+                        <div className="contactSkill--content">
+                            <p className="contactSkill--content--title">
+                                phone
+                            </p>
+                            <p className="contactSkill--content--body">{storageSdt}</p>
+                        </div>
+                    </div>
+                    <div className="paper--contactSkill">pro skills</div>
+                    {storageSkill.map((skill,index) => {
+                        return(
+                        <div key={index}>
+                            <p className="contactSkill--skillName">{skill.name}</p>
+                            <div className="contactSkill--skillRange">
+                                <div style={{width: skill.point * 14}} className="contactSkill--skillLevel"></div>
                             </div>
-                            <div className="paper--introduce">
-                                <div className="introduce--header">
-                                    <span className="introduce--order">2</span>
-                                    <span className="introduce--title">education</span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                </div>
-                                <div className="introduce--body-container">
-                                    {storageHocvan.map((hocVan,index) => {
-                                        return(
-                                            <div key={index} className="introduce--body-row">
-                                                <div className="introduce--body-col-1">
-                                                    <div className="introduce--year">{hocVan.start}-{hocVan.end}</div>
-                                                    <p className="introduce--year--title">Học tập</p>
-                                                </div>
-                                                <div className="introduce--body-col-2">
-                                                    <p className="introduce--content--title">{hocVan.name}</p>
-                                                    <p className="introduce--content--body">{hocVan.content}</p>
-                                                </div>
-                                            </div>
-                                        )
-                                    })}
-                                </div>
+                        </div>
+                    )})}
+                    <div className="paper--circle-container">
+                        <span className="paper--circle"></span>
+                        <span className="paper--circle"></span>
+                        <span style={{ background: "#D5D6D7" }} className="paper--circle"></span>
+                    </div>
+                </div>
+                <div className="paper--margin-right">
+                    <p className="paper--job">{storageJobPos}</p>
+                    <div className="paper--nameBox">
+                        <p className="paper--name">{storageName}</p>
+                    </div>
+                    <div className="paper--introduce-padding">
+                        <div className="paper--introduce">
+                            <div className="introduce--header">
+                                <span className="introduce--order">1</span>
+                                <span className="introduce--title">About me</span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
                             </div>
-                            <div className="paper--introduce">
-                                <div className="introduce--header">
-                                    <span className="introduce--order">3</span>
-                                    <span className="introduce--title">experience</span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                    <span className="paper--circle"></span>
-                                </div>
-                                <div className="introduce--body-container">
-                                    {storageEx.map((kinhNghiem, index) => {
-                                        return(
-                                            <div key={index} className="introduce--body-row">
-                                                <div className="introduce--body-col-1">
-                                                    <div className="introduce--year">{kinhNghiem.start}-{kinhNghiem.end}</div>
-                                                    <p className="introduce--year--title">Kinh nghiệm</p>
-                                                </div>
-                                                <div className="introduce--body-col-2">
-                                                    <p className="introduce--content--title">{kinhNghiem.name}</p>
-                                                    <p className="introduce--content--body">{kinhNghiem.content}</p>
-                                                </div>
+                            <p className="introduce--para">{storageAboutMe}</p>
+                        </div>
+                        <div className="paper--introduce">
+                            <div className="introduce--header">
+                                <span className="introduce--order">2</span>
+                                <span className="introduce--title">education</span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                            </div>
+                            <div className="introduce--body-container">
+                                {storageHocvan.map((hocVan,index) => {
+                                    return(
+                                        <div key={index} className="introduce--body-row">
+                                            <div className="introduce--body-col-1">
+                                                <div className="introduce--year">{hocVan.start}-{hocVan.end}</div>
+                                                <p className="introduce--year--title">Học tập</p>
                                             </div>
-                                        )
-                                    })}
-                                </div>
+                                            <div className="introduce--body-col-2">
+                                                <p className="introduce--content--title">{hocVan.name}</p>
+                                                <p className="introduce--content--body">{hocVan.content}</p>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                        <div className="paper--introduce">
+                            <div className="introduce--header">
+                                <span className="introduce--order">3</span>
+                                <span className="introduce--title">experience</span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                                <span className="paper--circle"></span>
+                            </div>
+                            <div className="introduce--body-container">
+                                {storageEx.map((kinhNghiem, index) => {
+                                    return(
+                                        <div key={index} className="introduce--body-row">
+                                            <div className="introduce--body-col-1">
+                                                <div className="introduce--year">{kinhNghiem.start}-{kinhNghiem.end}</div>
+                                                <p className="introduce--year--title">Kinh nghiệm</p>
+                                            </div>
+                                            <div className="introduce--body-col-2">
+                                                <p className="introduce--content--title">{kinhNghiem.name}</p>
+                                                <p className="introduce--content--body">{kinhNghiem.content}</p>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div style={{ marginBottom: "72px", textAlign: "right" }}>
+            </div>
+            <div style={{ animation: "appear 0.5s ease" }} className="container appear--animation">
+                <div style={{ margin: "24px 0px 72px 0px", textAlign: "right" }}>
                     { !isLoading && (<button onClick={handleDownload} className="btn btn--turn">Tải PDF</button>) }
                     { isLoading && (<button className="btn btn--turn" disabled>Đang tải...</button>) }
                 </div>

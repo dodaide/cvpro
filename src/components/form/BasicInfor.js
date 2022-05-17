@@ -32,6 +32,7 @@ function BasicInfor(){
                 <input
                     value={name}
                     className="input--perInf"
+                    placeholder="Nguyen Van A"
                     onChange = {e => setName(e.target.value)}
                     onBlur = {e => localStorage.setItem('name',JSON.stringify(e.target.value))}
                 />
@@ -41,6 +42,7 @@ function BasicInfor(){
                 <input
                     value={address}
                     className="input--perInf"
+                    placeholder="Hà Đông, Hà Nội"
                     onChange = {e => setAddress(e.target.value)}
                     onBlur = {e => localStorage.setItem('address',JSON.stringify(e.target.value))}
                 />
@@ -50,6 +52,7 @@ function BasicInfor(){
                 <input
                     value={fb}
                     className="input--perInf"
+                    placeholder="www.facebook.com"
                     onChange = {e => setFb(e.target.value)}
                     onBlur = {e => localStorage.setItem('fb',JSON.stringify(e.target.value))}
                 />
@@ -59,6 +62,7 @@ function BasicInfor(){
                 <input
                     value={sdt}
                     className="input--perInf"
+                    placeholder="0356958888"
                     onChange = {e => setSdt(e.target.value)}
                     onBlur = {e => localStorage.setItem('sdt',JSON.stringify(e.target.value))}
                 />
@@ -68,6 +72,7 @@ function BasicInfor(){
                 <input
                     value={jobPos}
                     className="input--perInf"
+                    placeholder="Giám đốc"
                     onChange = {e => setJobPost(e.target.value)}
                     onBlur = {e => localStorage.setItem('jobPos',JSON.stringify(e.target.value))}
                 />

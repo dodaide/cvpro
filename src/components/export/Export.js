@@ -1,7 +1,38 @@
 import "./Export.css"
 import { Link } from "react-router-dom";
+import { useRef, useState } from "react";
+import axios from "axios";
+import base64 from 'base-64'
 
 function Export() {
+    const htmlFake = useRef(null);
+    const [isLoading,setIsLoading] = useState(false);
+
+    const handleDownload = async () => {
+        setIsLoading(true);
+        const base64HTML = base64.encode(unescape(encodeURIComponent(htmlFake.current.innerHTML)))
+        const apiUrl = 'https://v2.convertapi.com/convert/html/to/pdf?Secret=XD6SNCUWGia6IM8u&StoreFile=true';
+        const postData = {
+            "Parameters": [
+                {
+                    "Name": "File",
+                    "FileValue": {
+                        "Name": "cv.html",
+                        "Data": base64HTML
+                    }
+                },
+                {
+                    "Name": "StoreFile",
+                    "Value": true
+                }
+            ]
+        }
+        const response = await axios.post(apiUrl, postData);
+        setIsLoading(false);
+        const URL = response.data.Files[0].Url;
+        window.open(URL, '_blank');
+    }
+
     var storageName = JSON.parse(localStorage.getItem('name')) ?? '';
     var storageAddress = JSON.parse(localStorage.getItem('address')) ?? '';
     var storageFb = JSON.parse(localStorage.getItem('fb')) ?? '';
@@ -18,7 +49,7 @@ function Export() {
                 <div style={{ marginTop: "120px" }}>
                     <Link to="/forms" className="btn btn--turn">Điền mẫu</Link>
                 </div>
-                <div className="row form--paper">
+                <div ref={htmlFake} className="row form--paper">
                     <div className="paper--margin-left">
                         <div className="paper--image--container">
                             <img className="paper--image" src={storageAvt}/>
@@ -159,7 +190,8 @@ function Export() {
                     </div>
                 </div>
                 <div style={{ marginBottom: "72px", textAlign: "right" }}>
-                    <a className="btn btn--turn">Tải PDF</a>
+                    { !isLoading && (<button onClick={handleDownload} className="btn btn--turn">Tải PDF</button>) }
+                    { isLoading && (<button className="btn btn--turn" disabled>Đang tải...</button>) }
                 </div>
             </div>
         </>

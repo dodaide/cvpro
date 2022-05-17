@@ -5,7 +5,6 @@ import Form from './components/form/Form';
 import Home from './components/home/Home.js';
 import MakeCV from './components/makecv/MakeCV.js';
 import Export from './components/export/Export';
-import Final from './components/final/Final';
 import logo from './logo.png';
 
 
@@ -28,7 +27,6 @@ function App() {
         <Route path='/taocv' element={<MakeCV/>}/>
         <Route path='/forms' element={<Form/>}/>
         <Route path='/export' element={<Export/>}/>
-        <Route path='/final' element={<Final/>}/>
       </Routes>
       <div className="footer .container-fluid">
         <div className='container'>

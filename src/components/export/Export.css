@@ -1,5 +1,206 @@
+.form--paper{
+    position: relative;
+    width: 595px;
+    height: 842px;
+    margin: 24px auto;
+    background: #ffffff;
+    box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.08), 0px 9px 46px rgba(0, 0, 0, 0.12);
+}
+
+.paper--margin-left{
+    width: 218px;
+    height: 100%;
+    background: #33393B;
+}
+
+.paper--circle-container{
+    position: absolute;
+    bottom: 20px;
+    left: 82px;
+}
+
+.paper--image--container{
+    margin: 36px auto 0px auto;
+    text-align: center;
+}
+
+.paper--image{
+    width: 146px;
+    height: 219px;
+    background: #ffffff;
+    border-radius: 90px 90px 0px 0px;
+}
+
+.paper--contactSkill{
+    width: 139px;
+    margin: 24px auto;
+    border: 2px solid #F2AB44;
+    border-radius: 40px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    line-height: 33px;
+}
+
+.contactSkill--body{
+    display: flex;
+    align-items: center;
+}
+
+.contactSkill--body + .contactSkill--body{
+    margin-top: 12px;
+}
+
+.contactSkill--field{
+    width: 63px;
+    height: 28px;
+    margin-left: -15px;
+    padding-right: 8px;
+    text-align: right;
+    background: #F2AB44;
+    border-radius: 0px 20px 20px 0px;
+    flex: 2;
+}
+
+.contactSkill--field i{
+    color: white;
+    line-height: 28px;
+}
+
+.contactSkill--content{
+    padding-left: 12px;
+    flex: 5;
+}
+
+.contactSkill--content--title{
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    line-height: normal;
+    margin: 0px;
+}
+
+.contactSkill--content--body{
+    font-weight: 400;
+    font-size: 10px;
+    color: #FFFFFF;
+    margin: 0px;
+    line-height: normal;
+    overflow-wrap: break-word;
+    width: 130px;
+}
+
+.contactSkill--skillName{
+    font-size: 10px;
+    margin-bottom: 0px;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 24px;
+}
+
+.contactSkill--skillRange{
+    margin: auto;
+    width: 140px;
+    height: 18px;
+    background: #D5D6D7;
+    border-radius: 40px;
+}
+
+.contactSkill--skillLevel{
+    height: 18px;
+    background: #F2AB44;
+    border-radius: 40px;
+}
+
+.paper--circle{
+    width: 10px;
+    height: 10px;
+    background: #F2AB44;
+    border-radius: 5px;
+    display: inline-block;
+    margin-inline: 4px;
+}
+
+.paper--margin-right{
+    width: 377px;
+}
+
+.paper--job{
+    margin: 32px 0px 8px 0px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+}
+
+.paper--nameBox{
+    height: 61px;
+    margin: 0px -15px;
+    background: #F2AB44;
+}
+
+.paper--name{
+    font-weight: 500;
+    line-height: 61px;
+    font-size: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+.paper--introduce-padding{
+    padding-left: 24px;
+    padding-top: 20px;
+}
+
+.introduce--order{
+    background-color: #F2AB44;
+    color: white;
+    border-radius: 30px;
+    display: inline-block;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.introduce--title{
+    text-transform: uppercase;
+    margin-inline: 10px;
+    color: #33393B;
+}
+
+.introduce--para{
+    height: 60px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    font-weight: 400;
+}
+
+.introduce--para, .introduce--body-container{
+    font-size: 10px;
+    line-height: normal;
+    margin: 0px;
+    margin: 16px 50px 16px 16px;
+    color: #3f4345;
+}
+
+.introduce--body-row{
+    display: flex;
+}
+
+.introduce--body-row + .introduce--body-row{
+    margin-top: 8px;
+}
+
 .introduce--year{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 120px;
     height: 15px;
     background: #33393B;

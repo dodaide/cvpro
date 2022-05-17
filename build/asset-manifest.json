@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cvpro/build/static/css/main.9c5d96d4.css",
-    "main.js": "/cvpro/build/static/js/main.031ff852.js",
+    "main.css": "/cvpro/build/static/css/main.49fed197.css",
+    "main.js": "/cvpro/build/static/js/main.ece8141a.js",
     "static/js/787.7d6dab3c.chunk.js": "/cvpro/build/static/js/787.7d6dab3c.chunk.js",
     "static/media/Frame17.png": "/cvpro/build/static/media/Frame17.20395d547f0adbb3db86.png",
     "static/media/1.jpg": "/cvpro/build/static/media/1.7d7299196a7f1a227285.jpg",
@@ -18,12 +18,12 @@
     "static/media/User_font_awesome.svg.png": "/cvpro/build/static/media/User_font_awesome.svg.891eab9a673cd8f44785.png",
     "static/media/logo.png": "/cvpro/build/static/media/logo.82e6f4b052b55cacf35a.png",
     "index.html": "/cvpro/build/index.html",
-    "main.9c5d96d4.css.map": "/cvpro/build/static/css/main.9c5d96d4.css.map",
-    "main.031ff852.js.map": "/cvpro/build/static/js/main.031ff852.js.map",
+    "main.49fed197.css.map": "/cvpro/build/static/css/main.49fed197.css.map",
+    "main.ece8141a.js.map": "/cvpro/build/static/js/main.ece8141a.js.map",
     "787.7d6dab3c.chunk.js.map": "/cvpro/build/static/js/787.7d6dab3c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c5d96d4.css",
-    "static/js/main.031ff852.js"
+    "static/css/main.49fed197.css",
+    "static/js/main.ece8141a.js"
   ]
 }

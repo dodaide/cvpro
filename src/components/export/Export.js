@@ -1,4 +1,4 @@
-// import "./Export.css"
+import "./Export.css"
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import axios from "axios";
@@ -10,7 +10,281 @@ function Export() {
 
     const handleDownload = async () => {
         setIsLoading(true);
-        const base64HTML = base64.encode(unescape(encodeURIComponent(htmlFake.current.innerHTML)))
+        var finalHTML = `<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        </head>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+                font-family: 'Roboto', sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+                color: #003459;
+            }
+            
+            .form--paper{
+                position: relative;
+                width: 595px;
+                height: 842px;
+                margin: 24px auto;
+                background: #ffffff;
+                box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.08), 0px 9px 46px rgba(0, 0, 0, 0.12);
+            }
+            
+            .paper--margin-left{
+                width: 218px;
+                height: 100%;
+                background: #33393B;
+            }
+            
+            .paper--circle-container{
+                position: absolute;
+                bottom: 20px;
+                left: 82px;
+            }
+            
+            .paper--image--container{
+                margin: 36px auto 0px auto;
+                text-align: center;
+            }
+            
+            .paper--image{
+                width: 146px;
+                height: 219px;
+                background: #ffffff;
+                border-radius: 90px 90px 0px 0px;
+            }
+            
+            .paper--contactSkill{
+                width: 139px;
+                margin: 24px auto;
+                border: 2px solid #F2AB44;
+                border-radius: 40px;
+                color: white;
+                text-transform: uppercase;
+                font-size: 16px;
+                text-align: center;
+                line-height: 33px;
+            }
+            
+            .contactSkill--body{
+                display: flex;
+                align-items: center;
+            }
+            
+            .contactSkill--body + .contactSkill--body{
+                margin-top: 12px;
+            }
+            
+            .contactSkill--field{
+                width: 63px;
+                height: 28px;
+                margin-left: -15px;
+                padding-right: 8px;
+                text-align: right;
+                background: #F2AB44;
+                border-radius: 0px 20px 20px 0px;
+                flex: 2;
+            }
+            
+            .contactSkill--field i{
+                color: white;
+                line-height: 28px;
+            }
+            
+            .contactSkill--content{
+                padding-left: 12px;
+                flex: 5;
+            }
+            
+            .contactSkill--content--title{
+                font-weight: 500;
+                font-size: 12px;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                line-height: normal;
+                margin: 0px;
+            }
+            
+            .contactSkill--content--body{
+                font-weight: 400;
+                font-size: 10px;
+                color: #FFFFFF;
+                margin: 0px;
+                line-height: normal;
+                overflow-wrap: break-word;
+                width: 130px;
+            }
+            
+            .contactSkill--skillName{
+                font-size: 10px;
+                margin-bottom: 0px;
+                color: #FFFFFF;
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 24px;
+            }
+            
+            .contactSkill--skillRange{
+                margin: auto;
+                width: 140px;
+                height: 18px;
+                background: #D5D6D7;
+                border-radius: 40px;
+            }
+            
+            .contactSkill--skillLevel{
+                height: 18px;
+                background: #F2AB44;
+                border-radius: 40px;
+            }
+            
+            .paper--circle{
+                width: 10px;
+                height: 10px;
+                background: #F2AB44;
+                border-radius: 5px;
+                display: inline-block;
+                margin-inline: 4px;
+            }
+            
+            .paper--margin-right{
+                width: 377px;
+            }
+            
+            .paper--job{
+                margin: 32px 0px 8px 0px;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 20px;
+                text-align: center;
+                color: #000000;
+            }
+            
+            .paper--nameBox{
+                height: 61px;
+                margin: 0px -15px;
+                background: #F2AB44;
+            }
+            
+            .paper--name{
+                font-weight: 500;
+                line-height: 61px;
+                font-size: 28px;
+                text-align: center;
+                color: #FFFFFF;
+                margin: 0px;
+            }
+            
+            .paper--introduce-padding{
+                padding-left: 24px;
+                padding-top: 20px;
+            }
+            
+            .introduce--order{
+                background-color: #F2AB44;
+                color: white;
+                border-radius: 30px;
+                display: inline-block;
+                line-height: 40px;
+                width: 40px;
+                height: 40px;
+                font-size: 30px;
+                text-align: center;
+            }
+            
+            .introduce--title{
+                text-transform: uppercase;
+                margin-inline: 10px;
+                color: #33393B;
+            }
+            
+            .introduce--para{
+                height: 60px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 5;
+                font-weight: 400;
+            }
+            
+            .introduce--para, .introduce--body-container{
+                font-size: 10px;
+                line-height: normal;
+                margin: 0px;
+                margin: 16px 50px 16px 16px;
+                color: #3f4345;
+            }
+            
+            .introduce--body-row{
+                display: flex;
+            }
+            
+            .introduce--body-row + .introduce--body-row{
+                margin-top: 8px;
+            }
+            
+            .introduce--year{
+                width: 120px;
+                height: 15px;
+                background: #33393B;
+                border-radius: 0px 40px 40px 0px;
+                color: white;
+                font-size: 11px;
+                text-align: right;
+                line-height: 15px;
+                margin-left: -55px;
+                padding-right: 11px;
+            }
+            
+            .introduce--year--title{
+                width: 100px;
+                font-size: 12px;
+                line-height: normal;
+                margin: 4px 0px 0px 0px;
+                color: #33393B;
+            }
+            
+            .introduce--content--title{
+                font-weight: 400;
+                font-size: 12px;
+                color: #000000;
+                line-height: normal;
+                margin: 0px;
+                color: #3f4345;
+            }
+            
+            .introduce--content--body{
+                margin: 4px 0px 0px 0px;
+                font-size: 10px;
+                color: #000000;
+                line-height: normal;
+                font-weight: 400;
+                color: #3f4345;
+                height: 24px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+        </style>
+        <body>
+            ${htmlFake.current.innerHTML}
+        </body>
+        </html>`
+        const base64HTML = base64.encode(unescape(encodeURIComponent(finalHTML)))
         const apiUrl = 'https://v2.convertapi.com/convert/html/to/pdf?Secret=XD6SNCUWGia6IM8u&StoreFile=true';
         const postData = {
             "Parameters": [
@@ -49,139 +323,137 @@ function Export() {
                 <div style={{ marginTop: "120px" }}>
                     <Link to="/forms" className="btn btn--turn">Điền mẫu</Link>
                 </div>
-                <div ref={htmlFake} style={{display: "flex",position: "relative",width: "595px",height: "842px",margin: "24px auto",background: "#ffffff",boxShadow: "0px 24px 38px rgba(0, 0, 0, 0.08), 0px 9px 46px rgba(0, 0, 0, 0.12)"}} >
-                    <div style={{width: "218px",height: "100%",background: "#33393B"}}>
-                        <div style={{margin: "36px auto 0px auto",textAlign: "center"}}>
-                            <img style={{width: "146px",height: "219px",background: "#ffffff",borderRadius: "90px 90px 0px 0px"}} src={storageAvt}/>
+                <div ref={htmlFake} className="row form--paper">
+                    <div className="paper--margin-left">
+                        <div className="paper--image--container">
+                            <img className="paper--image" src={storageAvt}/>
                         </div>
-                        <div style={{width: "139px",margin: "24px auto",border: "2px solid #F2AB44",borderRadius: "40px",color: "white",textTransform: "uppercase",fontSize: "16px",textAlign: "center",lineHeight: "33px"}}>contact me</div>
-                        <div style={{display: "flex",alignItems: "center",marginBottom: "12px"}}>
-                            <div style={{width: "63px",height: "28px",paddingRight: "8px",textAlign: "right",background: "#F2AB44",borderRadius: "0px 20px 20px 0px",flex: "2"}}>
-                                <i style={{color: "white",lineHeight: "28px"}} className="uil uil-map-marker"></i>
+                        <div className="paper--contactSkill">contact me</div>
+                        <div className="contactSkill--body">
+                            <div className="contactSkill--field">
+                                <i className="uil uil-map-marker"></i>
                             </div>
-                            <div style={{paddingLeft: "12px",flex: "5"}}>
-                                <p style={{fontWeight: "500",fontSize: "12px",color: "#FFFFFF",textTransform: "uppercase",lineHeight: "normal",margin: "0px"}}>
+                            <div className="contactSkill--content">
+                                <p className="contactSkill--content--title">
                                     address
                                 </p>
-                                <p charSet="UTF-8" style={{fontWeight: "400",fontSize: "10px",color: "#FFFFFF",margin: "0px",lineHeight: "normal",overflowWrap: "break-word",width: "130px"}}>{storageAddress}</p>
+                                <p className="contactSkill--content--body">{storageAddress}</p>
                             </div>
                         </div>
-                        <div style={{display: "flex",alignItems: "center",marginBottom: "12px"}}>
-                            <div style={{width: "63px",height: "28px",paddingRight: "8px",textAlign: "right",background: "#F2AB44",borderRadius: "0px 20px 20px 0px",flex: "2"}}>
-                                <i style={{color: "white",lineHeight: "28px"}} className="uil uil-facebook-f"></i>
+                        <div className="contactSkill--body">
+                            <div className="contactSkill--field">
+                                <i className="uil uil-facebook-f"></i>
                             </div>
-                            <div style={{paddingLeft: "12px",flex: "5"}}>
-                                <p style={{fontWeight: "500",fontSize: "12px",color: "#FFFFFF",textTransform: "uppercase",lineHeight: "normal",margin: "0px"}}>
+                            <div className="contactSkill--content">
+                                <p className="contactSkill--content--title">
                                     facebook
                                 </p>
-                                <p style={{fontWeight: "400",fontSize: "10px",color: "#FFFFFF",margin: "0px",lineHeight: "normal",overflowWrap: "break-word",width: "130px"}}>{storageFb}</p>
+                                <p className="contactSkill--content--body">{storageFb}</p>
                             </div>
                         </div>
-                        <div style={{display: "flex",alignItems: "center"}}>
-                            <div style={{width: "63px",height: "28px",paddingRight: "8px",textAlign: "right",background: "#F2AB44",borderRadius: "0px 20px 20px 0px",flex: "2"}}>
-                                <i style={{color: "white",lineHeight: "28px"}} className="uil uil-phone"></i>
+                        <div className="contactSkill--body">
+                            <div className="contactSkill--field">
+                                <i className="uil uil-phone-alt"></i>
                             </div>
-                            <div style={{paddingLeft: "12px",flex: "5"}}>
-                                <p style={{fontWeight: "500",fontSize: "12px",color: "#FFFFFF",textTransform: "uppercase",lineHeight: "normal",margin: "0px"}}>
-                                    Phone
+                            <div className="contactSkill--content">
+                                <p className="contactSkill--content--title">
+                                    phone
                                 </p>
-                                <p style={{fontWeight: "400",fontSize: "10px",color: "#FFFFFF",margin: "0px",lineHeight: "normal",overflowWrap: "break-word",width: "130px"}}>{storageSdt}</p>
+                                <p className="contactSkill--content--body">{storageSdt}</p>
                             </div>
                         </div>
-                        <div style={{width: "139px",margin: "24px auto",border: "2px solid #F2AB44",borderRadius: "40px",color: "white",textTransform: "uppercase",fontSize: "16px",textAlign: "center",lineHeight: "33px"}}>pro skills</div>
+                        <div className="paper--contactSkill">pro skills</div>
                         {storageSkill.map((skill,index) => {
                             return(
                             <div key={index}>
-                                <p style={{fontSize: "10px",marginBottom: "0px",color: "#FFFFFF",textAlign: "center",textTransform: "uppercase",lineHeight: "24px"}}>{skill.name}</p>
-                                <div style={{margin: "auto",width: "140px",height: "18px",background: "#D5D6D7",borderRadius: "40px"}}>
-                                    <div style={{width: skill.point * 14,height: "18px",background: "#F2AB44",borderRadius: "40px"}}></div>
+                                <p className="contactSkill--skillName">{skill.name}</p>
+                                <div className="contactSkill--skillRange">
+                                    <div style={{width: skill.point * 14}} className="contactSkill--skillLevel"></div>
                                 </div>
                             </div>
                         )})}
-                        <div style={{position: "absolute", bottom: "12px",left: "82px"}}>
-                            <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                            <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                            <span style={{background: "#D5D6D7",width: "10px",height: "10px",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
+                        <div className="paper--circle-container">
+                            <span className="paper--circle"></span>
+                            <span className="paper--circle"></span>
+                            <span style={{ background: "#D5D6D7" }} className="paper--circle"></span>
                         </div>
                     </div>
-                    <div style={{width: "377px"}}>
-                        <p style={{margin: "32px 0px 8px 0px",textTransform: "uppercase",fontWeight: "400",fontSize: "20px",textAlign: "center",color: "#000000"}}>{storageJobPos}</p>
-                        <div style={{height: "61px",margin: "0px",background: "#F2AB44"}}>
-                            <p style={{fontWeight: "500",lineHeight: "61px",fontSize: "28px",textAlign: "center",color: "#FFFFFF",margin: "0px"}}>{storageName}</p>
+                    <div className="paper--margin-right">
+                        <p className="paper--job">{storageJobPos}</p>
+                        <div className="paper--nameBox">
+                            <p className="paper--name">{storageName}</p>
                         </div>
-                        <div style={{paddingLeft: "24px",paddingTop: "20px"}}>
-                            <div>
-                                <div>
-                                    <span style={{backgroundColor: "#F2AB44",color: "white",borderRadius: "30px",display: "inline-block",lineHeight: "40px",width: "40px",height: "40px",fontSize: "30px",textAlign: "center"}}>1</span>
-                                    <span style={{display: "inline-block",width: "120px",textTransform: "uppercase",marginInline: "10px",color: "#33393B"}}>About me</span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
+                        <div className="paper--introduce-padding">
+                            <div className="paper--introduce">
+                                <div className="introduce--header">
+                                    <span className="introduce--order">1</span>
+                                    <span className="introduce--title">About me</span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
                                 </div>
-                                <p style={{height: "60px",overflow: "hidden",display: "-webkit-box",WebkitBoxOrient: "vertical",WebkitLineClamp: "5",fontWeight: "400",fontSize: "10px",lineHeight: "normal",margin: "16px 50px 16px 16px",color: "#3f4345"}} >{storageAboutMe}</p>
+                                <p className="introduce--para">{storageAboutMe}</p>
                             </div>
-                            <div>
-                                <div>
-                                    <span style={{backgroundColor: "#F2AB44",color: "white",borderRadius: "30px",display: "inline-block",lineHeight: "40px",width: "40px",height: "40px",fontSize: "30px",textAlign: "center"}}>2</span>
-                                    <span style={{display: "inline-block",width: "120px",textTransform: "uppercase",marginInline: "10px",color: "#33393B"}}>Education</span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
+                            <div className="paper--introduce">
+                                <div className="introduce--header">
+                                    <span className="introduce--order">2</span>
+                                    <span className="introduce--title">education</span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
                                 </div>
-                                <div style={{fontSize: "10px",lineHeight: "normal",margin: "16px 50px 16px 16px",color: "#3f4345"}}>
+                                <div className="introduce--body-container">
                                     {storageHocvan.map((hocVan,index) => {
                                         return(
-                                            <div key={index} style={{display: "flex",marginTop: "8px"}}>
-                                                <div>
-                                                    <div style={{width: "120px",height: "15px",background: "#33393B",borderRadius: "0px 40px 40px 0px",color: "white",fontSize: "11px",textAlign: "right",lineHeight: "15px",marginLeft: "-40px",paddingRight: "11px"}}>{hocVan.start}-{hocVan.end}</div>
-                                                    <p style={{width: "100px",fontSize: "12px",lineHeight: "normal",margin: "4px 0px 0px 0px",color: "#33393B"}}>Học tập</p>
+                                            <div key={index} className="introduce--body-row">
+                                                <div className="introduce--body-col-1">
+                                                    <div className="introduce--year">{hocVan.start}-{hocVan.end}</div>
+                                                    <p className="introduce--year--title">Học tập</p>
                                                 </div>
-                                                <div>
-                                                    <p style={{width: "100px",fontSize: "12px",lineHeight: "normal",margin: "4px 0px 0px 0px",color: "#33393B"}}>{hocVan.name}</p>
-                                                    <p style={{margin: "4px 0px 0px 0px",fontSize: "10px",color: "#000000",lineHeight: "normal",fontWeight: "400",color: "#3f4345",height: "24px",overflow: "hidden",display: "-webkit-box",WebkitBoxOrient: "vertical",WebkitLineClamp: "2"}}>{hocVan.content}</p>
+                                                <div className="introduce--body-col-2">
+                                                    <p className="introduce--content--title">{hocVan.name}</p>
+                                                    <p className="introduce--content--body">{hocVan.content}</p>
                                                 </div>
                                             </div>
                                         )
                                     })}
                                 </div>
                             </div>
-                            <div>
-                                <div>
-                                    <span style={{backgroundColor: "#F2AB44",color: "white",borderRadius: "30px",display: "inline-block",lineHeight: "40px",width: "40px",height: "40px",fontSize: "30px",textAlign: "center"}}>3</span>
-                                    <span style={{display: "inline-block",width: "120px",textTransform: "uppercase",marginInline: "10px",color: "#33393B"}}>experience</span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
-                                    <span style={{width: "10px",height: "10px",background: "#F2AB44",borderRadius: "5px",display: "inline-block",marginInline: "4px"}}></span>
+                            <div className="paper--introduce">
+                                <div className="introduce--header">
+                                    <span className="introduce--order">3</span>
+                                    <span className="introduce--title">experience</span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
+                                    <span className="paper--circle"></span>
                                 </div>
-                                <div style={{fontSize: "10px",lineHeight: "normal",margin: "16px 50px 16px 16px",color: "#3f4345"}}>
-                                    {storageEx.map((kinhNghiem,index) => {
+                                <div className="introduce--body-container">
+                                    {storageEx.map((kinhNghiem, index) => {
                                         return(
-                                            <div key={index} style={{display: "flex",marginTop: "8px"}}>
-                                                <div>
-                                                    <div style={{width: "120px",height: "15px",background: "#33393B",borderRadius: "0px 40px 40px 0px",color: "white",fontSize: "11px",textAlign: "right",lineHeight: "15px",marginLeft: "-40px",paddingRight: "11px"}}>{kinhNghiem.start}-{kinhNghiem.end}</div>
-                                                    <p style={{width: "100px",fontSize: "12px",lineHeight: "normal",margin: "4px 0px 0px 0px",color: "#33393B"}}>Kinh nghiệm</p>
+                                            <div key={index} className="introduce--body-row">
+                                                <div className="introduce--body-col-1">
+                                                    <div className="introduce--year">{kinhNghiem.start}-{kinhNghiem.end}</div>
+                                                    <p className="introduce--year--title">Kinh nghiệm</p>
                                                 </div>
-                                                <div>
-                                                    <p style={{width: "100px",fontSize: "12px",lineHeight: "normal",margin: "4px 0px 0px 0px",color: "#33393B"}}>{kinhNghiem.title}</p>
-                                                    <p style={{margin: "4px 0px 0px 0px",fontSize: "10px",color: "#000000",lineHeight: "normal",fontWeight: "400",color: "#3f4345",height: "24px",overflow: "hidden",display: "-webkit-box",WebkitBoxOrient: "vertical",WebkitLineClamp: "2"}}>{kinhNghiem.content}</p>
+                                                <div className="introduce--body-col-2">
+                                                    <p className="introduce--content--title">{kinhNghiem.name}</p>
+                                                    <p className="introduce--content--body">{kinhNghiem.content}</p>
                                                 </div>
                                             </div>
                                         )

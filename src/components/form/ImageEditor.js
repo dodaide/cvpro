@@ -5,6 +5,7 @@ function ImageEditor(){
             <div className="col-md-12">
                 <label>Độ sáng</label>
                 <input
+                    disabled
                     type="range"
                     min="0"
                     max="10"
@@ -14,6 +15,7 @@ function ImageEditor(){
             <div className="col-md-12">
                 <label>Độ mờ</label>
                 <input
+                    disabled
                     type="range"
                     min="0"
                     max="10"
@@ -23,6 +25,7 @@ function ImageEditor(){
             <div className="col-md-12">
                 <label>Độ tươi</label>
                 <input
+                    disabled
                     type="range"
                     min="0"
                     max="10"
@@ -32,6 +35,7 @@ function ImageEditor(){
             <div className="col-md-12">
                 <label>Độ bão hòa</label>
                 <input
+                    disabled
                     type="range"
                     min="0"
                     max="10"

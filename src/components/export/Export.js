@@ -36,8 +36,8 @@ function Export() {
             
             .form--paper{
                 position: relative;
-                width: 1536px;
-                height: 2174px;
+                width: 1519px;
+                height: 2148px;
                 background: #ffffff;
                 box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.08), 0px 9px 46px rgba(0, 0, 0, 0.12);
             }
@@ -47,7 +47,7 @@ function Export() {
                 top: 0px;
                 left: 0px;
                 width: 563px;
-                height: 2174px;
+                height: 2148px;
                 background: #33393B;
             }
             
@@ -167,7 +167,7 @@ function Export() {
             }
             
             .paper--margin-right{
-                width: 973px;
+                width: 956px;
                 position: absolute;
                 top: 0px;
                 height: 2174px;
@@ -223,7 +223,7 @@ function Export() {
             }
             
             .introduce--para{
-                height: 155px;
+                height: 154px;
                 overflow: hidden;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
@@ -309,6 +309,30 @@ function Export() {
                 {
                     "Name": "StoreFile",
                     "Value": true
+                },
+                {
+                    "Name": "PageRange",
+                    "Value": "1"
+                },
+                {
+                    "Name": "PageSize",
+                    "Value": "a4"
+                },
+                {
+                    "Name": "MarginTop",
+                    "Value": "0"
+                },
+                {
+                    "Name": "MarginRight",
+                    "Value": "0"
+                },
+                {
+                    "Name": "MarginBottom",
+                    "Value": "0"
+                },
+                {
+                    "Name": "MarginLeft",
+                    "Value": "0"
                 }
             ]
         }

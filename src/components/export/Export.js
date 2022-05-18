@@ -405,7 +405,7 @@ function Export() {
                         <div key={index}>
                             <p className="contactSkill--skillName">{skill.name}</p>
                             <div className="contactSkill--skillRange">
-                                <div style={{width: skill.point * 14}} className="contactSkill--skillLevel"></div>
+                                <div style={{width: skill.point * 37.8}} className="contactSkill--skillLevel"></div>
                             </div>
                         </div>
                     )})}
